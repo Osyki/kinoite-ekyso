@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: blue-build/template
+  - label: osyki/kinoite-ekyso
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: blue-build/template
+      - label: kinoite-ekyso
