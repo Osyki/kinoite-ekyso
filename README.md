@@ -1,6 +1,13 @@
 # Kinoite-Ekyso
 
-This is a custom image based on the [Bazzite kinoite-nvidia](https://github.com/ublue-os/bazzite).
+This is a custom image based on [Bazzite kinoite-nvidia](https://github.com/ublue-os/bazzite).
+
+It includes the following changes:
+- Virt-manager (layered)
+- LibreOffice (layered)
+- Discord (flatpak)
+- Spotify (flatpak)
+- Vinegar (flatpak)
 
 ## BlueBuild Template &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
