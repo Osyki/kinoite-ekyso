@@ -59,5 +59,5 @@ Note that this release-iso action is not a replacement for a full-blown release 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
+cosign verify --key cosign.pub ghcr.io/osyki/kinoite-ekyso
 ```
