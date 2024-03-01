@@ -1,8 +1,8 @@
-name: bluebuild
+name: Build Kinoite-ekyso Image
 on:
   schedule:
-    - cron: "20 17 * * *" # build at 17:00 UTC every day 
-                          # (20 minutes after last ublue images start building)
+    - cron: "20 17 * * *" # build at 17:20 UTC every day 
+                          # (40 minutes after last ublue images start building)
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
