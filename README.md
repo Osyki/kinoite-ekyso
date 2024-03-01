@@ -21,8 +21,17 @@ After setup, it is recommended you update this README to describe your custom im
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
 To rebase an existing atomic Fedora installation to the latest build:
+`
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+- First pin your current ostree image to make sure you can rollback:
+  ```
+  sudo rpm-ostree pin <index: number>
+  ```
+- Then remove all layered packages to prepare for rebase:
+  ```
+  rpm-ostree reset
+  ```
+- Then rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/osyki/kinoite-ekyso:latest
   ```
