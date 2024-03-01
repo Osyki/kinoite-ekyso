@@ -25,7 +25,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First pin your current ostree image to make sure you can rollback:
   ```
-  sudo rpm-ostree pin <index: number>
+  sudo ostree pin <index: number>
   ```
 - Then remove all layered packages to prepare for rebase:
   ```
