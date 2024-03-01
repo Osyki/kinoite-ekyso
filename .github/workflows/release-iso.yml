@@ -5,10 +5,10 @@ on:
       - ".github/workflows/release-iso.yml"
   workflow_dispatch:
 
-name: release-iso
+name: Release Kinoite-ekyso ISO
 jobs:
   release-iso:
-    name: Generate and Release ISOs
+    name: Generate and Release Kinoite-ekyso ISOs
     runs-on: ubuntu-latest
     permissions:
       contents: write
