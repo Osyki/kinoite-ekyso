@@ -23,7 +23,9 @@ modules:
       # - micro
       # - starship
       - libreoffice
+      - virt-install
       - virt-manager
+      - virt-viewer
 
     remove:
       # - firefox # default firefox removed in favor of flatpak
