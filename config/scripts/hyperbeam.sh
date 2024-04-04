@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # download the latest version of Hyperbeam
-curl -L https://cdn.hyperbeam.com/Hyperbeam-0.21.0.AppImage -o /usr/local/bin/Hyperbeam.AppImage
+wget https://cdn.hyperbeam.com/Hyperbeam-0.21.0.AppImage -O /usr/local/bin/Hyperbeam.AppImage
 
 # make the AppImage executable
 chmod +x /usr/local/bin/Hyperbeam.AppImage
