@@ -11,5 +11,6 @@ install:
   - virt-viewer
 
 remove:
+  - waydroid-selinux
   - waydroid
   - cage
