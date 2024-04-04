@@ -5,7 +5,7 @@ base-image: ghcr.io/ublue-os/bazzite-nvidia
 image-version: latest
 
 modules:
-  - from-file: modules/containerfiles.yml
+  - from-file: modules/scripts.yml
   - from-file: modules/files.yml
   - from-file: modules/rpm-ostree.yml
   - from-file: modules/default-flatpaks.yml
