@@ -21,3 +21,8 @@ RUN wget https://cdn.hyperbeam.com/Hyperbeam-0.21.0.AppImage -O /usr/local/bin/H
         Type=Application \
         Icon=hyperbeam \
         Categories=Utility;Application;EOF
+
+RUN rm -rf \
+    /tmp/* \
+    /var/* && \
+    ostree container commit
