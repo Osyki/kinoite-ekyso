@@ -1,0 +1,10 @@
+COPY ./config/containerfiles/setupvscode/system_files /
+
+RUN rpm-ostree install \
+    code
+
+RUN \
+  rm -rf \
+  /tmp/* \
+  /var/* && \
+  ostree container commit

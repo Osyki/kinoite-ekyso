@@ -1,0 +1,13 @@
+type: default-flatpaks
+
+notify: true # Send notification after install/uninstall is finished (true/false)
+
+system:
+  install:
+    - com.discordapp.Discord
+    - com.spotify.Client
+    - org.vinegarhq.Vinegar
+    - org.gnome.Boxes
+    - us.zoom.Zoom
+    
+  remove:
