@@ -1,0 +1,23 @@
+# download and install BalenaEtcher
+RUN wget $(wget -q https://api.github.com/repos/balena-io/etcher/releases/latest -O - | jq -r '.assets[] | select(.name | contains("AppImage")) | .browser_download_url') -O /usr/local/bin/BalenaEtcher.AppImage && \
+    chmod +x /usr/local/bin/BalenaEtcher.AppImage && \
+    cat <<EOF > /usr/share/applications/balena-etcher.desktop \
+        [Desktop Entry] \
+        Name=BalenaEtcher \
+        Exec=/usr/local/bin/BalenaEtcher.AppImage \
+        Terminal=false \
+        Type=Application \
+        Icon=balena-etcher \
+        Categories=Utility;Application;EOF 
+
+# Download and install Hyperbeam
+RUN wget https://cdn.hyperbeam.com/Hyperbeam-0.21.0.AppImage -O /usr/local/bin/Hyperbeam.AppImage && \
+    chmod +x /usr/local/bin/Hyperbeam.AppImage && \
+    cat <<EOF > /usr/share/applications/hyperbeam.desktop \
+        [Desktop Entry] \
+        Name=Hyperbeam \
+        Exec=/usr/local/bin/Hyperbeam.AppImage \
+        Terminal=false \
+        Type=Application \
+        Icon=hyperbeam \
+        Categories=Utility;Application;EOF
