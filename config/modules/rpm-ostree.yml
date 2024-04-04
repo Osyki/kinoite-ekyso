@@ -8,8 +8,8 @@ install:
   - qemu-kvm
   - virt-manager
   - virt-viewer
+  - code
   # - qemu
-  # - code
 
 remove:
   - waydroid-selinux
