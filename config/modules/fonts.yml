@@ -1,0 +1,6 @@
+type: fonts
+fonts:
+  nerd-fonts:
+    - JetBrainsMono
+    - Lilex
+    - FiraCode
