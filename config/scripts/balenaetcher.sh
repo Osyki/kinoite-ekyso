@@ -2,20 +2,17 @@
 set -euo pipefail
 
 # download the latest version of BalenaEtcher from https://github.com/balena-io/etcher/releases with latest tag
-curl -L $(curl -s https://api.github.com/repos/balena-io/etcher/releases/latest | jq -r '.assets[] | select(.name | contains("AppImage")) | .browser_download_url') -o /tmp/BalenaEtcher.AppImage
+curl -L $(curl -s https://api.github.com/repos/balena-io/etcher/releases/latest | jq -r '.assets[] | select(.name | contains("AppImage")) | .browser_download_url') -o /usr/local/bin/BalenaEtcher.AppImage
 
 # make the AppImage executable
-chmod +x /tmp/BalenaEtcher.AppImage
-
-# move the AppImage to the applications directory
-mv /tmp/BalenaEtcher.AppImage /usr/local/bin/BalenaEtcher
+chmod +x /usr/local/bin/BalenaEtcher.AppImage
 
 # create a desktop entry for BalenaEtcher
 cat <<EOF > /usr/share/applications/BalenaEtcher.desktop
 [Desktop Entry]
 Name=BalenaEtcher
-Exec=/usr/local/bin/BalenaEtcher
-Icon=/usr/local/bin/BalenaEtcher
+Exec=/usr/local/bin/BalenaEtcher.AppImage
+Icon=/usr/local/bin/BalenaEtcher.AppImage
 Type=Application
 Categories=Utility;
 EOF

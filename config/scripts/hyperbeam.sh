@@ -2,20 +2,17 @@
 set -euo pipefail
 
 # download the latest version of Hyperbeam
-curl -L https://cdn.hyperbeam.com/Hyperbeam-0.21.0.AppImage -o /tmp/Hyperbeam-0.21.0.AppImage
+curl -L https://cdn.hyperbeam.com/Hyperbeam-0.21.0.AppImage -o /usr/local/bin/Hyperbeam.AppImage
 
 # make the AppImage executable
-chmod +x /tmp/Hyperbeam-0.21.0.AppImage
-
-# move the AppImage to the applications directory
-mv /tmp/Hyperbeam-0.21.0.AppImage /usr/local/bin/Hyperbeam
+chmod +x /usr/local/bin/Hyperbeam.AppImage
 
 # create a desktop entry for Hyperbeam
 cat <<EOF > /usr/share/applications/Hyperbeam.desktop
 [Desktop Entry]
 Name=Hyperbeam
-Exec=/usr/local/bin/Hyperbeam
-Icon=/usr/local/bin/Hyperbeam
+Exec=/usr/local/bin/Hyperbeam.AppImage
+Icon=/usr/local/bin/Hyperbeam.AppImage
 Type=Application
 Categories=Network;
 EOF
