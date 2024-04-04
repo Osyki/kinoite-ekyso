@@ -11,7 +11,5 @@ install:
   - virt-viewer
 
 remove:
-  - rocm-hip
-  - rocm-opencl
   - waydroid
   - cage
