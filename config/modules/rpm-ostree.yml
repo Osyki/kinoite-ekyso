@@ -5,11 +5,11 @@ install:
   - virt-install
   - libvirt-daemon-config-network
   - libvirt-daemon-kvm
-  - qemu
   - qemu-kvm
   - virt-manager
   - virt-viewer
-  - code
+  # - qemu
+  # - code
 
 remove:
   - waydroid-selinux
