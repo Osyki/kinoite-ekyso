@@ -1,47 +1,12 @@
-# image will be published to ghcr.io/<user>/<name>
 name: kinoite-ekyso
-# description will be included in the image's metadata
 description: This is my personal OS image.
 
-# the base image to build on top of (FROM) and the version tag to use
+
 base-image: ghcr.io/ublue-os/bazzite-nvidia
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: latest
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - usr: /usr # copies config/files/usr into your image's /usr.
-                  # put configuration files you want in /etc/ on a booted system 
-                  # in /usr/etc/ in the image. read more in files module reference.
-
-  - type: rpm-ostree
-    repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-    install:
-      - libreoffice
-      - virt-install
-      - libvirt-daemon-config-network
-      - libvirt-daemon-kvm
-      - qemu
-      - qemu-kvm
-      - virt-manager
-      - virt-viewer
-      
-
-    remove:
-
-  - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      install:
-        - com.discordapp.Discord
-        - com.spotify.Client
-        - org.vinegarhq.Vinegar
-        - org.gnome.Boxes
-        - us.zoom.Zoom
-      remove:
-
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - from-file: modules/rpm-ostree.yml
+  - from-file: modules/default-flatpaks.yml
+  - type: signing
 

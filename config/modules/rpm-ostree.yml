@@ -1,0 +1,18 @@
+type: rpm-ostree
+
+install:
+  - libreoffice
+  - virt-install
+  - libvirt-daemon-config-network
+  - libvirt-daemon-kvm
+  - qemu
+  - qemu-kvm
+  - virt-manager
+  - virt-viewer
+
+remove:
+  - rocm-hip
+  - rocm-opencl
+  - rocm-clinfo
+  - waydroid
+  - cage
