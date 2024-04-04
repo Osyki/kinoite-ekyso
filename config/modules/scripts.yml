@@ -1,0 +1,5 @@
+type: script
+
+scripts:
+  - balenaetcher.sh
+  - hyperbeam.sh
