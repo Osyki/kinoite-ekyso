@@ -1,4 +1,4 @@
-COPY system_files /
+COPY ./config/containerfiles/setupvscode/system_files /
 
 RUN rpm-ostree install \
     code
