@@ -13,6 +13,5 @@ install:
 remove:
   - rocm-hip
   - rocm-opencl
-  - rocm-clinfo
   - waydroid
   - cage
