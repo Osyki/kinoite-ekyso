@@ -12,7 +12,8 @@
     #     Categories=Utility;Application;EOF 
 
 # Download and install Hyperbeam
-RUN wget https://cdn.hyperbeam.com/Hyperbeam-0.21.0.AppImage -O /usr/local/bin/Hyperbeam.AppImage
+RUN mkdir usr/local/bin && \
+    wget https://cdn.hyperbeam.com/Hyperbeam-0.21.0.AppImage -O /usr/local/bin/Hyperbeam.AppImage
     # chmod +x /usr/local/bin/Hyperbeam.AppImage
     #  && \
     # cat <<EOF > /usr/share/applications/hyperbeam.desktop \
