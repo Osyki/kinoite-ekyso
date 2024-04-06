@@ -9,5 +9,7 @@ system:
     - org.vinegarhq.Vinegar
     - org.gnome.Boxes
     - us.zoom.Zoom
+    - io.gitlab.librewolf-community
+    - tv.plex.PlexDesktop
     
   remove:
